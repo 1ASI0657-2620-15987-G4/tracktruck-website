@@ -304,7 +304,7 @@
           <ion-icon name="chevron-forward"></ion-icon>
         </button>
 
-        <a href="#" class="hero-btn has-after">
+        <a href="https://drive.google.com/drive/folders/1I_2aXx4dLlWSSUoU1ZOf2n-N8-A1Ju52?usp=sharing" target="_blank" rel="noopener noreferrer" class="hero-btn has-after">
           <img src="./assets/images/letsgo.png" width="48" height="48" alt="booking icon">
 
           <span class="label-2 text-center span">
@@ -677,7 +677,11 @@
           <p class="copyright">
             &copy; 2024 Cargo. Todos los derechos reservados
           </p>
-          
+          <div class="footer-legal">
+            <button class="footer-legal-link" onclick="openModal('terms-modal')">Términos y Condiciones</button>
+            <span class="footer-legal-separator">|</span>
+            <button class="footer-legal-link" onclick="openModal('privacy-modal')">Política de Privacidad</button>
+          </div>
         </div>
       </div>
     </footer>
@@ -694,12 +698,189 @@
 
 
 
-  <!-- 
+  <!-- MODAL: TÉRMINOS Y CONDICIONES -->
+  <div class="legal-modal" id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+    <div class="legal-modal-overlay" onclick="closeModal('terms-modal')"></div>
+    <div class="legal-modal-content">
+      <button class="legal-modal-close" onclick="closeModal('terms-modal')" aria-label="Cerrar">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="legal-modal-body">
+        <h2 id="terms-title">CargoExpress: Términos y Condiciones</h2>
+        <p>Bienvenido a CargoExpress, plataforma digital desarrollada y operada por CargoSystems. El presente Acuerdo de Servicio SaaS establece los términos y condiciones que regulan el acceso, uso y funcionamiento de la plataforma, así como los derechos, obligaciones y restricciones aplicables a los usuarios.</p>
+        <p>El uso de la plataforma implica la aceptación plena y sin reservas de las disposiciones establecidas en este documento. Si el usuario no está de acuerdo con cualquiera de las condiciones aquí descritas, deberá abstenerse de utilizar el servicio.</p>
+
+        <h3>1. Definiciones</h3>
+        <p>Para efectos del presente acuerdo, los siguientes términos tendrán el significado indicado a continuación:</p>
+        <ul>
+          <li><strong>CargoSystems:</strong> Startup responsable del desarrollo, operación y mantenimiento de la plataforma CargoExpress.</li>
+          <li><strong>CargoExpress:</strong> Plataforma SaaS orientada al monitoreo, seguimiento y gestión de transporte de carga.</li>
+          <li><strong>Usuario:</strong> Persona natural o jurídica que accede o utiliza la plataforma.</li>
+          <li><strong>Cliente:</strong> Empresa o entidad que contrata los servicios ofrecidos por CargoExpress.</li>
+          <li><strong>Cuenta:</strong> Registro creado por el usuario para acceder a las funcionalidades de la plataforma.</li>
+          <li><strong>Contenido:</strong> Información, datos, documentos, imágenes, ubicaciones GPS, registros de gastos y cualquier otro material cargado o generado dentro de la plataforma.</li>
+          <li><strong>Servicio SaaS:</strong> Modelo de prestación de software mediante acceso remoto a través de internet, sin necesidad de instalación local completa.</li>
+        </ul>
+
+        <h3>2. Objeto del Servicio</h3>
+        <p>CargoExpress proporciona una plataforma tecnológica orientada a empresas de transporte, operadores logísticos y clientes que requieren monitoreo de carga en tiempo real. La plataforma permite, entre otras funcionalidades:</p>
+        <ul>
+          <li>Seguimiento en tiempo real de vehículos y mercancías.</li>
+          <li>Visualización del estado y ubicación de envíos.</li>
+          <li>Registro y administración de gastos de transporte.</li>
+          <li>Gestión de vehículos y conductores.</li>
+          <li>Historial de envíos realizados.</li>
+          <li>Alertas relevantes durante el trayecto.</li>
+          <li>Comunicación y transparencia entre empresas transportistas y clientes.</li>
+        </ul>
+        <p>CargoSystems podrá actualizar, modificar o mejorar las funcionalidades del servicio cuando lo considere necesario para fines operativos, técnicos o de seguridad.</p>
+
+        <h3>3. Elegibilidad y Registro de Usuarios</h3>
+        <p>Para utilizar la plataforma, el usuario deberá:</p>
+        <ul>
+          <li>Ser mayor de edad conforme a la legislación aplicable.</li>
+          <li>Proporcionar información veraz, completa y actualizada.</li>
+          <li>Mantener la confidencialidad de sus credenciales de acceso.</li>
+          <li>Utilizar la plataforma únicamente para fines legales y autorizados.</li>
+        </ul>
+        <p>El usuario es responsable de toda actividad realizada desde su cuenta. CargoSystems se reserva el derecho de rechazar registros, suspender cuentas o cancelar accesos cuando detecte información falsa, actividades sospechosas o incumplimientos del presente acuerdo.</p>
+
+        <h3>4. Licencia de Uso</h3>
+        <p>CargoSystems concede al usuario una licencia limitada, no exclusiva, intransferible y revocable para acceder y utilizar la plataforma conforme a las condiciones establecidas en este acuerdo. La licencia otorgada no implica transferencia de propiedad intelectual ni derechos sobre el software, infraestructura, diseño, código fuente o funcionalidades de la plataforma.</p>
+        <p>El usuario no podrá:</p>
+        <ul>
+          <li>Copiar, modificar o distribuir el software.</li>
+          <li>Descompilar, realizar ingeniería inversa o intentar acceder al código fuente.</li>
+          <li>Revender o sublicenciar el servicio sin autorización escrita.</li>
+          <li>Utilizar la plataforma para actividades ilícitas o fraudulentas.</li>
+          <li>Introducir malware, virus o software malicioso.</li>
+          <li>Intentar vulnerar la seguridad o estabilidad de la plataforma.</li>
+        </ul>
+
+        <h3>5. Disponibilidad del Servicio</h3>
+        <p>CargoSystems realizará esfuerzos razonables para mantener la disponibilidad continua del servicio. Sin embargo, no garantiza que la plataforma estará libre de interrupciones, errores o fallos técnicos. El servicio podrá verse temporalmente afectado por mantenimiento programado, actualizaciones de infraestructura, problemas de conectividad, fallos de terceros o casos fortuitos o fuerza mayor.</p>
+
+        <h3>6. Protección de Datos y Privacidad</h3>
+        <p>CargoSystems se compromete a proteger la información personal y empresarial proporcionada por los usuarios. La recopilación, almacenamiento y tratamiento de datos se realizará conforme a la legislación aplicable en materia de protección de datos personales. Para mayor información consulte nuestra Política de Privacidad.</p>
+
+        <h3>7. Obligaciones del Usuario</h3>
+        <p>El usuario se compromete a utilizar la plataforma de forma responsable y conforme a la ley, no proporcionar información falsa o engañosa, mantener actualizados sus datos de registro, respetar los derechos de propiedad intelectual de CargoSystems, y adoptar medidas razonables para proteger sus credenciales de acceso. El incumplimiento de estas obligaciones podrá derivar en la suspensión temporal o definitiva de la cuenta.</p>
+
+        <h3>8. Restricciones de Uso</h3>
+        <p>Queda estrictamente prohibido manipular datos de seguimiento o ubicación, alterar registros de gastos o evidencia documental, compartir accesos con terceros no autorizados, utilizar herramientas automatizadas que afecten la estabilidad del servicio, y acceder sin autorización a cuentas ajenas.</p>
+
+        <h3>9. Propiedad Intelectual</h3>
+        <p>Todos los derechos de propiedad intelectual relacionados con CargoExpress pertenecen exclusivamente a CargoSystems o a sus respectivos titulares, incluyendo software, diseño de interfaz, bases de datos, logotipos, marcas, contenido gráfico, arquitectura tecnológica y documentación. El uso de la plataforma no otorga al usuario derechos de propiedad sobre ninguno de estos elementos.</p>
+
+        <h3>10. Contenido Generado por el Usuario</h3>
+        <p>El usuario conserva la titularidad sobre la información y contenido que cargue en la plataforma. Sin embargo, al utilizar el servicio, concede a CargoSystems una autorización limitada para almacenar, procesar y utilizar dicha información únicamente con fines relacionados a la prestación del servicio, monitoreo logístico, generación de reportes y cumplimiento legal.</p>
+
+        <h3>11. Seguridad de la Plataforma</h3>
+        <p>CargoSystems implementa medidas razonables de seguridad para proteger la plataforma y la información almacenada. El usuario deberá notificar inmediatamente cualquier acceso no autorizado, vulneración de seguridad o uso indebido de su cuenta.</p>
+
+        <h3>12. Limitación de Responsabilidad</h3>
+        <p>CargoSystems no será responsable por interrupciones temporales del servicio, pérdidas indirectas o lucro cesante, daños derivados de fallos de conectividad, errores ocasionados por terceros, ni eventos de fuerza mayor. La responsabilidad total de CargoSystems estará limitada al monto efectivamente pagado por el usuario durante el período de suscripción inmediatamente anterior al incidente.</p>
+
+        <h3>13. Suspensión y Terminación</h3>
+        <p>CargoSystems podrá suspender o cancelar el acceso a la plataforma cuando el usuario incumpla este acuerdo, existan indicios de fraude o actividad ilícita, se detecten riesgos para la seguridad, exista incumplimiento de obligaciones de pago, o sea requerido por autoridad competente.</p>
+
+        <h3>14. Modificaciones del Acuerdo</h3>
+        <p>CargoSystems podrá modificar el presente acuerdo cuando resulte necesario por razones legales, técnicas, comerciales u operativas. Las modificaciones serán publicadas en la sección "Terms and Conditions" del website y entrarán en vigencia desde su publicación. El uso continuado de la plataforma constituirá aceptación de los nuevos términos.</p>
+
+        <h3>15. Cumplimiento Normativo</h3>
+        <p>El usuario se compromete a utilizar la plataforma respetando la normativa aplicable relacionada con protección de datos personales, transporte y logística, comercio electrónico, seguridad informática y prevención de actividades ilícitas.</p>
+
+        <h3>16. Soporte Técnico</h3>
+        <p>CargoSystems podrá ofrecer soporte técnico mediante los canales habilitados en la plataforma, incluyendo asistencia relacionada con acceso, incidentes técnicos, errores operativos y consultas funcionales. Los tiempos de respuesta podrán variar según la complejidad del incidente y el plan contratado.</p>
+
+        <h3>17. Ley Aplicable y Jurisdicción</h3>
+        <p>El presente acuerdo se regirá conforme a las leyes vigentes de la República del Perú. Cualquier controversia será sometida a la jurisdicción de los tribunales competentes de Lima, Perú.</p>
+
+        <h3>18. Contacto</h3>
+        <p>Para consultas relacionadas con este Acuerdo de Servicio SaaS o sobre el funcionamiento de la plataforma, el usuario podrá comunicarse mediante los canales oficiales publicados en la sección "Contacto" del website.</p>
+
+        <h3>19. Aceptación de los Términos</h3>
+        <p>Al registrarse, acceder o utilizar CargoExpress, el usuario declara haber leído, comprendido y aceptado íntegramente el presente Acuerdo de Servicio SaaS.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: POLÍTICA DE PRIVACIDAD -->
+  <div class="legal-modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+    <div class="legal-modal-overlay" onclick="closeModal('privacy-modal')"></div>
+    <div class="legal-modal-content">
+      <button class="legal-modal-close" onclick="closeModal('privacy-modal')" aria-label="Cerrar">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="legal-modal-body">
+        <h2 id="privacy-title">CargoExpress: Política de Privacidad</h2>
+        <p>CargoSystems, responsable del desarrollo y operación de la plataforma CargoExpress, se compromete a proteger la privacidad de los usuarios. La presente Política de Privacidad describe cómo se recopila, utiliza, almacena y protege la información personal y operativa de los usuarios, en concordancia con lo establecido en el Acuerdo de Servicio SaaS.</p>
+        <p>El uso de la plataforma implica la aceptación de las disposiciones aquí descritas. Si el usuario no está de acuerdo con esta política, deberá abstenerse de utilizar el servicio.</p>
+
+        <h3>Responsable del Tratamiento de Datos</h3>
+        <p>CargoSystems, a través de la plataforma CargoExpress, es responsable del tratamiento de los datos personales y operativos recopilados durante el uso del servicio. Las consultas relacionadas con esta política pueden dirigirse mediante los canales oficiales publicados en la sección "Contacto" del website.</p>
+
+        <h3>Datos que Recopilamos</h3>
+        <p>Durante el registro y uso de la plataforma, CargoExpress recopila los siguientes tipos de información según el rol del usuario:</p>
+        <ul>
+          <li><strong>Datos comunes de cuenta:</strong> Correo electrónico, contraseña (cifrada) y número de teléfono.</li>
+          <li><strong>Datos del usuario con rol Empresario:</strong> Nombre de la empresa y dirección.</li>
+          <li><strong>Datos del usuario con rol Cliente:</strong> DNI y fecha de nacimiento.</li>
+          <li><strong>Datos operativos:</strong> Información de viajes (origen, destino, fechas, estado), ubicación referencial de vehículos, registros de gastos, datos de vehículos y conductores, e historial de auditoría de cambios.</li>
+        </ul>
+
+        <h3>Finalidad del Tratamiento de Datos</h3>
+        <p>Los datos recopilados son utilizados exclusivamente para:</p>
+        <ul>
+          <li>Crear y administrar la cuenta del usuario.</li>
+          <li>Prestar las funcionalidades principales de la plataforma.</li>
+          <li>Generar reportes y resúmenes operativos.</li>
+          <li>Mantener el registro de auditoría de cambios.</li>
+          <li>Enviar comunicaciones relacionadas con el servicio.</li>
+          <li>Cumplir con obligaciones legales aplicables.</li>
+        </ul>
+        <p>CargoExpress no utiliza los datos personales del usuario con fines publicitarios ni los comparte con terceros para fines comerciales ajenos a la prestación del servicio.</p>
+
+        <h3>Almacenamiento de Datos en la Nube</h3>
+        <p>Los datos del usuario se almacenan en una base de datos MySQL alojada en la infraestructura en la nube de Railway. CargoSystems adopta las siguientes medidas: conexiones a la base de datos mediante canales encriptados, gestión de credenciales mediante variables de entorno, y contraseñas almacenadas de forma cifrada.</p>
+
+        <h3>Conservación de los Datos</h3>
+        <p>Los datos del usuario se conservarán mientras la cuenta permanezca activa en la plataforma. En caso de que el usuario solicite la eliminación de su cuenta, CargoSystems procederá a eliminar o anonimizar los datos personales, salvo aquella información que deba conservarse por obligación legal.</p>
+
+        <h3>Derechos del Usuario sobre sus Datos</h3>
+        <p>El usuario tiene derecho a:</p>
+        <ul>
+          <li>Acceder a los datos personales que CargoExpress ha registrado sobre él.</li>
+          <li>Solicitar la corrección de datos inexactos o desactualizados.</li>
+          <li>Solicitar la eliminación de su cuenta y datos personales.</li>
+          <li>Retirar su consentimiento para el tratamiento de datos.</li>
+        </ul>
+        <p>Estas solicitudes pueden realizarse a través de los canales de contacto oficiales de CargoExpress.</p>
+
+        <h3>Seguridad de la Información</h3>
+        <p>CargoSystems implementa medidas razonables de seguridad técnicas y organizativas para proteger los datos del usuario contra accesos no autorizados, pérdida o alteración, incluyendo autenticación mediante contraseña cifrada, validaciones de formato en el registro y registro de auditoría de cambios. No obstante, el usuario reconoce que ningún sistema informático es completamente invulnerable.</p>
+
+        <h3>Menores de Edad</h3>
+        <p>CargoExpress no está dirigido a menores de edad. El registro en la plataforma requiere que el usuario sea mayor de edad conforme a la legislación aplicable.</p>
+
+        <h3>Cambios en la Política de Privacidad</h3>
+        <p>CargoSystems podrá actualizar la presente Política de Privacidad cuando resulte necesario por razones legales, técnicas u operativas. Las modificaciones serán publicadas en la sección "Política de Privacidad" del website y dentro de la aplicación móvil, y entrarán en vigencia desde su publicación.</p>
+
+        <h3>Ley Aplicable</h3>
+        <p>La presente Política de Privacidad se rige conforme a las leyes vigentes de la República del Perú en materia de protección de datos personales.</p>
+
+        <h3>Contacto</h3>
+        <p>Para consultas relacionadas con el tratamiento de datos personales, el usuario podrá comunicarse mediante los canales oficiales publicados en la sección "Contacto" del website.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
 
-  
+
 </body>
 
 </html>

@@ -120,6 +120,36 @@ const slidePrev = function () {
 heroSliderPrevBtn.addEventListener("click", slidePrev);
 
 
+/**
+ * LEGAL MODALS
+ */
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+}
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".legal-modal.active").forEach(function (modal) {
+      modal.classList.remove("active");
+    });
+    document.body.style.overflow = "";
+  }
+});
+
+
 
 
 

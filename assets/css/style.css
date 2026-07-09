@@ -3000,3 +3000,165 @@ h4 {
     font-size: 20px;
   }
 }
+
+/*-----------------------------------*\
+  #FOOTER LEGAL LINKS
+\*-----------------------------------*/
+
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-block-start: 10px;
+}
+
+.footer-legal-link {
+  background: none;
+  border: none;
+  color: var(--quick-silver);
+  font-size: var(--fontSize-label-2);
+  letter-spacing: var(--letterSpacing-1);
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition-1);
+  text-transform: uppercase;
+  font-family: var(--fontFamily-dm_sans);
+}
+
+.footer-legal-link:hover {
+  color: var(--gold-crayola);
+}
+
+.footer-legal-separator {
+  color: var(--quick-silver);
+  font-size: var(--fontSize-label-2);
+}
+
+/*-----------------------------------*\
+  #LEGAL MODALS
+\*-----------------------------------*/
+
+.legal-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.legal-modal.active {
+  display: flex;
+}
+
+.legal-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--black-alpha-80);
+  cursor: pointer;
+}
+
+.legal-modal-content {
+  position: relative;
+  background-color: var(--eerie-black-2);
+  border: 1px solid var(--white-alpha-20);
+  border-radius: var(--radius-24);
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.legal-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-20);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-1);
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.legal-modal-close:hover {
+  background: var(--gold-crayola);
+  color: var(--black);
+}
+
+.legal-modal-close ion-icon {
+  font-size: 2rem;
+}
+
+.legal-modal-body {
+  padding: 40px 36px 36px;
+  overflow-y: auto;
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-5);
+}
+
+.legal-modal-body h2 {
+  color: var(--gold-crayola);
+  font-size: var(--fontSize-title-2);
+  font-family: var(--fontFamily-forum);
+  margin-block-end: 20px;
+  padding-inline-end: 40px;
+}
+
+.legal-modal-body h3 {
+  color: var(--white);
+  font-size: var(--fontSize-label-1);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-1);
+  margin-block: 24px 8px;
+}
+
+.legal-modal-body p {
+  font-size: var(--fontSize-label-1);
+  margin-block-end: 12px;
+}
+
+.legal-modal-body ul {
+  padding-inline-start: 20px;
+  margin-block-end: 12px;
+}
+
+.legal-modal-body ul li {
+  list-style: disc;
+  font-size: var(--fontSize-label-1);
+  margin-block-end: 6px;
+}
+
+.legal-modal-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.legal-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.legal-modal-body::-webkit-scrollbar-thumb {
+  background: var(--white-alpha-20);
+  border-radius: 10px;
+}
+
+@media (max-width: 575px) {
+  .legal-modal-body {
+    padding: 36px 20px 24px;
+  }
+
+  .legal-modal-body h2 {
+    font-size: 2rem;
+  }
+}
